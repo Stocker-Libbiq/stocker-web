@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function useHandleChange (): { inputName: string, handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void } {
+function useHandleChange (): { inputName: string, handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void, setInputName?: React.Dispatch<React.SetStateAction<string>> } {
   const [inputName, setInputName] = useState<string>('')
 
   function handleChange (e: React.ChangeEvent<HTMLInputElement>): void {
@@ -26,7 +26,7 @@ function useHandleChange (): { inputName: string, handleChange: (e: React.Change
       setInputName(e.target.value)
     }
   }
-  return { inputName, handleChange }
+  return { inputName, handleChange, setInputName }
 }
 
 export default useHandleChange

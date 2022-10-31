@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { Container } from '../styled-components/Container'
 
 export function Login (): JSX.Element {
@@ -11,6 +12,7 @@ export function Login (): JSX.Element {
           <label>Contraseña</label>
           <input type='password' name='pass' id='name' />
         </div>
+        <Link to='/form'>Ingresar</Link>
         <h3>Olvide mi contraseña</h3>
       </div>
     </Container>

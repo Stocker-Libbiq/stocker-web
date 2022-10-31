@@ -1,6 +1,8 @@
 import { Container } from '../styled-components/Container'
 import useHandleChange from '../hooks/useHandleChange'
 import { useEffect, useState } from 'react'
+import uniqid from 'uniqid'
+import { Link } from 'react-router-dom'
 
 export function Form (): JSX.Element {
   const { inputName: cas, handleChange: handleChangeCas } = useHandleChange()
@@ -11,24 +13,31 @@ export function Form (): JSX.Element {
   const { inputName: content, handleChange: handleChangeContent } = useHandleChange()
   const { inputName: um, handleChange: handleChangeUm } = useHandleChange()
 
+  const id = uniqid()
   const [items, setItems] = useState<reactiveLocalStorage[]>([])
   const reactiveArray: reactiveLocalStorage[] = []
   let reactive: reactiveLocalStorage
 
   interface reactiveLocalStorage {
-    cas: String
-    sku: String
-    name: String
-    clasification: String
-    brand: String
-    content: String
-    um: String
+    cas: string
+    sku: string
+    name: string
+    clasification: string
+    brand: string
+    content: string
+    um: string
+    id: string
   }
 
   useEffect(() => {
+    if (localStorage.length > 0){
+      const localStorag = JSON.parse(localStorage.getItem('reactive') as string)
+      setItems(localStorag)
+    }
+  }, [])
+  useEffect(() => {
     localStorage.removeItem('reactive')
     localStorage.setItem('reactive', JSON.stringify(items))
-    console.log(items)
   }, [items])
 
   function handleClick (e: React.MouseEvent<HTMLButtonElement>): void{
@@ -40,7 +49,8 @@ export function Form (): JSX.Element {
       clasification,
       brand,
       content,
-      um
+      um,
+      id
     }
     reactiveArray.push(...items, reactive)
     setItems(reactiveArray)
@@ -62,9 +72,8 @@ export function Form (): JSX.Element {
         <button onClick={(e) => handleClick(e)}>Anadir Reactivo</button>
       </div>
 
-      <div>
-        <p>tabla</p>
-      </div>
+      <Link to='/listReactive'>Lista de Reactivos</Link>
+
     </Container>
   )
 }
