@@ -60,6 +60,7 @@ export function Form (): JSX.Element {
     <Container>
       <div>
         <h2>AGREGAR REACTIVO</h2>
+        <Link className='list' to='/listReactive'>Lista de Reactivos</Link>
       </div>
       <div>
         <input type='text' name='cas' id='cas' placeholder='CAS' value={cas} onChange={handleChangeCas}/>
@@ -69,11 +70,8 @@ export function Form (): JSX.Element {
         <input type='text' name='brand' id='brand' placeholder='MARCA' value={brand} onChange={(e) => handleChangeBrand(e)}/>
         <input type='text' name='content' id='content' placeholder='CONTENIDO' value={content} onChange={(e) => handleChangeContent(e)}/>
         <input type='text' name='um' id='um' placeholder='UM' value={um} onChange={(e) => handleChangeUm(e)}/>
-        <button onClick={(e) => handleClick(e)}>Anadir Reactivo</button>
+        <button className='button' onClick={(e) => handleClick(e)}>Anadir Reactivo</button>
       </div>
-
-      <Link to='/listReactive'>Lista de Reactivos</Link>
-
     </Container>
   )
 }

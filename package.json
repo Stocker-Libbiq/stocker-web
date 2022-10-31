@@ -11,10 +11,12 @@
   "dependencies": {
     "@types/react-router-dom": "^5.3.3",
     "@types/styled-components": "^5.1.26",
+    "bootstrap-icons": "^1.9.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-router-dom": "6.4.2",
-    "styled-components": "5.3.6"
+    "styled-components": "5.3.6",
+    "uniqid": "^5.4.0"
   },
   "devDependencies": {
     "@types/react": "18.0.22",

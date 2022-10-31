@@ -3,50 +3,64 @@ import styled from 'styled-components'
 const HomeLogin = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  text-align: center;
-  width: 50%;
-  height: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 auto;
 
   .cardHome {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    h1{
-      font-size: 4rem;
+    align-items: center;
+    margin-bottom: 5rem;
+
+    h1 {
+      font-size: 5rem;
+      font-weight: 800;
+      color: #000;
+      margin-bottom: 0rem;
     }
-    h2{
+
+    h2 {
+      margin-top: 0rem;
       font-size: 3rem;
-      color: #0A74D6;
-      
-      span{
+      font-weight: 700;
+      color: blue;
+      span {
         color: black;
       }
     }
-    h3{
-      font-size: 2rem;
-      font-weight: 400;
+
+    h3 {
+      margin-top: 0rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: grey;
     }
   }
 
   .btnGoogle {
-    width: 45%;
     display: flex;
     justify-content: center;
-    text-align: center;
-    margin: 0 auto;
-    background: #1A1A1A;
-    
-    h2{
-      font-size: 3rem;
-      color: white;
+    align-items: center;
+    background-color: #000000;
+    border-radius: 8px;
+    width: 300px;
+    height: 50px;
+    text-decoration: none;
+
+    .bi-google {
+      font-size: 2rem;
+      color: orange;
     }
 
-    .link{
-      font-size: 2rem;
-      color: white;
-      margin: auto 0;
-      padding: 0 1rem;
+    .text {
+      font-size: 1.5rem;
+      color: #fff;
+      margin-left: 10px;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 700;
     }
   }
 `

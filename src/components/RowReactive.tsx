@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import reactiveLocalStorage from '../@types/types'
+import {ListReactive} from '../styled-components/home/ListReactive'
 
 interface reactiveInterface {
   cas: string
@@ -30,7 +31,7 @@ function RowReactive ({ reactive }: any, listState: JSX.Element[]): JSX.Element 
   }
 
   return (
-    <>
+    <ListReactive>
       <div>
         <table>
           <thead>
@@ -42,8 +43,6 @@ function RowReactive ({ reactive }: any, listState: JSX.Element[]): JSX.Element 
               <th>MARCA</th>
               <th>CONTENIDO</th>
               <th>UM</th>
-              <th></th>
-              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -55,13 +54,13 @@ function RowReactive ({ reactive }: any, listState: JSX.Element[]): JSX.Element 
               <td>{brand}</td>
               <td>{content}</td>
               <td>{um}</td>
-              <td><Link to={`/edit/${id}`}>Editar</Link></td>
-              <td><button onClick={() => deleteReactive(id)}>Eliminar</button></td>
             </tr>
+              <Link to={`/edit/${id}`} className='edit'>Editar</Link>
+              <button onClick={() => deleteReactive(id)} className='delete'>Eliminar</button>
           </tbody>
         </table>
       </div>
-    </>
+    </ListReactive>
   )
 }
 
