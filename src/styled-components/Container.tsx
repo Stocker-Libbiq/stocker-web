@@ -13,11 +13,12 @@ div {
 }
 
 div {
-  width: 60%;
+  width: 50%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   margin-top: 5rem;
 
   input {

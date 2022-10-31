@@ -1,11 +1,10 @@
 import styled from 'styled-components'
 
 const HomeWelcome = styled.div`
-  width: 50%;
+  width: 100%;
 
   .cardText {
     margin-top: 5rem;
-    width: 90%;
     .welcome {
       font-size: 3rem;
       color: blue;
@@ -26,7 +25,6 @@ const HomeWelcome = styled.div`
       .container {
         display: flex;
         align-items: center;
-        justify-content: space-between;
 
         i {
           font-size: 4rem;

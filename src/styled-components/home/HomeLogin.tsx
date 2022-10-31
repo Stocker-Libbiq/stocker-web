@@ -5,13 +5,12 @@ const HomeLogin = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0 auto;
 
   .cardHome {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin-bottom: 5rem;
 
     h1 {

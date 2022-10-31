@@ -55,7 +55,7 @@ function RowReactive ({ reactive }: any, listState: JSX.Element[]): JSX.Element 
               <td>{content}</td>
               <td>{um}</td>
             </tr>
-              <Link to={`/edit/${id}`} className='edit'>Editar</Link>
+              <Link to={`/edit/${id}`} className='editButton'>Editar</Link>
               <button onClick={() => deleteReactive(id)} className='delete'>Eliminar</button>
           </tbody>
         </table>

@@ -47,9 +47,10 @@ const ListReactive = styled.div`
         }
       }
 
-      .edit {
+      .editButton {
         color: green;
         text-decoration: none;
+        padding: 1rem;
         fons-size: 1.5rem;
       }
 
@@ -61,6 +62,18 @@ const ListReactive = styled.div`
         text-decoration: underline;
       }
     }
+  }
+
+  .edit {
+    color: green;
+    text-decoration: none;
+    fons-size: 2rem;
+    border: none;
+    background-color: blue;
+    color: white;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
   }
   
 `

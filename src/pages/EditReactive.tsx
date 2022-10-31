@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Params, useParams } from 'react-router-dom'
 import reactiveLocalStorage from '../@types/types'
 import useHandleChange from '../hooks/useHandleChange'
+import { ListReactive } from '../styled-components/home/ListReactive'
 
 function EditReactive (): JSX.Element {
   const { inputName: cas, handleChange: handleChangeCas, setInputName: setInputCas } = useHandleChange()
@@ -54,8 +55,8 @@ function EditReactive (): JSX.Element {
   }
 
   return (
-    <>
-      <div>
+    <ListReactive>
+      <div className='editContainer'>
         <input type='text' name='cas' id='cas' placeholder='CAS' value={cas} onChange={handleChangeCas}/>
         <input type='text' name='sku' id='sku' placeholder='SKU' value={sku} onChange={(e) => handleChangeSku(e)}/>
         <input type='text' name='name' id='mame' placeholder='NOMBRE' value={name} onChange={(e) => handleChangeName(e)}/>
@@ -63,9 +64,9 @@ function EditReactive (): JSX.Element {
         <input type='text' name='brand' id='brand' placeholder='MARCA' value={brand} onChange={(e) => handleChangeBrand(e)}/>
         <input type='text' name='content' id='content' placeholder='CONTENIDO' value={content} onChange={(e) => handleChangeContent(e)}/>
         <input type='text' name='um' id='um' placeholder='UM' value={um} onChange={(e) => handleChangeUm(e)}/>
-        <button onClick={editReactive}>Editar</button>
+        <button onClick={editReactive} className='edit'>Editar</button>
       </div>
-    </>
+    </ListReactive>
   )
 }
 
